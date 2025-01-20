@@ -97,7 +97,7 @@ if uploaded_file is not None:
                     "total_price": total_price,
                     "order_date": pd.Timestamp.now(),
                 }
-                data = data.append(new_sale, ignore_index=True)
+                data = pd.concat([data, pd.DataFrame([new_sale])], ignore_index=True)
                 st.success("Penjualan berhasil ditambahkan!")
 
     elif choice == "Laporan":
@@ -147,4 +147,5 @@ if uploaded_file is not None:
 
 else:
     st.info("Silakan unggah file CSV untuk memulai.")
+    
     
