@@ -147,6 +147,4 @@ if uploaded_file is not None:
 
 else:
     st.info("Silakan unggah file CSV untuk memulai.")
-    # Display Supplier Connection
-    st.sidebar.subheader("Koneksi Supplier")
-    st.sidebar.dataframe(suppliers)
+    
