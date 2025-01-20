@@ -2,6 +2,9 @@ import streamlit as st
 import pandas as pd
 import matplotlib.pyplot as plt
 
+# Set Page Configuration
+st.set_page_config(page_title="Dashboard Manajemen", layout="wide")
+
 # Upload Data File
 st.sidebar.title("Upload Data")
 uploaded_file = st.sidebar.file_uploader("Upload file CSV", type="csv")
@@ -16,9 +19,6 @@ if uploaded_file is not None:
         "contact": ["a@example.com", "b@example.com", "c@example.com"]
     }
     suppliers = pd.DataFrame(supplier_data)
-
-    # Streamlit App
-    st.set_page_config(page_title="Dashboard Manajemen", layout="wide")
 
     # Sidebar Navigation
     menu = ["Inventaris", "Penjualan", "Laporan"]
