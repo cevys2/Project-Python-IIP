@@ -81,7 +81,7 @@ if uploaded_file is not None:
             if quantity > available_stock:
                 st.error("Stok tidak mencukupi untuk penjualan ini.")
             else:
-                price_per_unit = data.loc[data["product_id"] == product_id, "price_per_unit"].values[0]
+                price_per_unit = data.loc[data["product_id"] == product_id, "price"].values[0]
                 total_price = price_per_unit * quantity
 
                 # Reduce stock
@@ -147,5 +147,5 @@ if uploaded_file is not None:
 
 else:
     st.info("Silakan unggah file CSV untuk memulai.")
-    
+
     
